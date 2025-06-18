@@ -1,0 +1,35 @@
+<div>
+  <div class="text-content">
+    <h2>All the Skills You Need in One Place</h2>
+    <h5><small>From critical skills to technical topics, SmartLearn by Karthik supports your professional
+        development.</small></h5>
+  </div>
+
+  <div class="carousel-container">
+    <div class="card category-card">
+      <div class="card-body">
+        <h5 class="card-tittle">
+          <i class="bi bi-bookmark-fill me-2"></i> All Courses
+        </h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
+          content.</p>
+        <a [routerLink]="['/course/browse']" class="btn btn-primary">Explore</a>
+      </div>
+
+    </div>
+
+<div class="card category-card" *ngFor="let category of categories">
+      <div class="card-body">
+        <h5 class="card-tittle">
+          <i class="bi bi-bookmark-fill me-2"></i> {{category.categoryName}}
+        </h5>
+        <p class="card-text">{{category.description}}</p>
+        <a href="#" class="btn btn-primary">Explore</a>
+      </div>
+
+    </div>
+
+
+
+  </div>
+</div>
