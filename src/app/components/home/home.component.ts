@@ -6,7 +6,7 @@ import { BrowseCourseComponent } from "../course/browse-course/browse-course.com
 
 @Component({
   selector: 'app-home',
-  imports: [CarouselModule, PlanAndPricingComponent, CategoryComponent, BrowseCourseComponent],
+  imports: [CarouselModule, PlanAndPricingComponent, CategoryComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

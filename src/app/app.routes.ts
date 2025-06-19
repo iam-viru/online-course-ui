@@ -10,9 +10,9 @@ export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent ,  data: { animation: 'HomePage' }},
   { path: 'course/category', component: CategoryComponent },
-  { path: 'course/category/:categoryId', component: CourseByCategoryComponent },  
-  { path: 'course/browse', component: BrowseCourseComponent },
+  { path: 'course/category/:categoryId', component: CourseByCategoryComponent },    
   {path: 'about-us',component:AboutUsComponent},
   {path:'contact-us',component:ContactUsComponent}
+  
 
 ];

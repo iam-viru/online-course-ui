@@ -11,8 +11,9 @@ selector: 'app-category',
   styleUrl: './category.component.css'
 })
 export class CategoryComponent  {
-    categories: CourseCategory[] = [];
-
+   
+ @Input() categories:CourseCategory[]=[]; // Input decorator is used to pass data from parent component to child component
+  @Input() viewType: 'tabs' | 'list' = 'list'; // Default view type is 'tabs', can be set to 'cards' for card view
     constructor() {
       this.categories = MOCK_COURSE_CATEGORIES;
     }
