@@ -4,6 +4,7 @@ import { MOCK_COURSES } from '../../../mock-data/mock-courses';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CourseCategory } from '../../../models/category';
+import { CourseService } from '../../../services/course.service';
 
 @Component({
   selector: 'app-browse-course',
@@ -20,7 +21,7 @@ export class BrowseCourseComponent implements OnInit, OnChanges {
   // this is used to pass the categoryId from the parent component to the child component
   // in same case if child needs to communicate with parent component than we use @output decorator
   @Input() categoryId: number = 0; // Default category ID, can be set dynamically based on routing or user selection
-  constructor() {
+  constructor(private courseService: CourseService) {
     this.courses = MOCK_COURSES;
   }
 
@@ -44,9 +45,18 @@ export class BrowseCourseComponent implements OnInit, OnChanges {
     this.getCourseByCategory(this.categoryId);
   }
   getCourseByCategory(CategoryId: number) {
-    this.courses = MOCK_COURSES.filter(course => course.categoryId === CategoryId);
-    if (this.courses.length === 0) {
+    this.courseService.getCoursesByCategoryId(CategoryId).subscribe(data=>{
+    //this.courses = MOCK_COURSES.filter(course => course.categoryId === CategoryId);
+    if (data.length === 0) {
       console.error(`No courses found for category ID: ${CategoryId}`);
+    }else{
+      this.courses = data;
     }
   }
+    , error => {
+      console.error(`Error fetching courses for category ID: ${CategoryId}`, error);
+    }
+    );
+  } 
 }
+  
