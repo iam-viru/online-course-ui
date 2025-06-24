@@ -5,10 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CourseCategory } from '../../../models/category';
 import { CourseService } from '../../../services/course.service';
+import { RouterModule } from '@angular/router';
+import { PopoverModule } from 'ngx-bootstrap/popover';
 
 @Component({
   selector: 'app-browse-course',
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule,RouterModule,PopoverModule],
   templateUrl: './browse-course.component.html',
   styleUrl: './browse-course.component.css'
 })
@@ -58,5 +60,5 @@ export class BrowseCourseComponent implements OnInit, OnChanges {
     }
     );
   } 
-}
+} 
   

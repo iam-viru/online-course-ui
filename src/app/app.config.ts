@@ -9,12 +9,14 @@ import { NgxSpinnerComponent, NgxSpinnerModule } from 'ngx-spinner';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PopoverModule } from 'ngx-bootstrap/popover';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     importProvidersFrom(CarouselModule.forRoot(),
     BrowserModule,
     BrowserAnimationsModule,
+    PopoverModule.forRoot(),
     NgxSpinnerModule.forRoot({type:'ball-scale-multiple' }),
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right',
