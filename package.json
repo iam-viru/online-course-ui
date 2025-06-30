@@ -6,11 +6,14 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build-prod": "ng build --configuration=production --output-hashing=all",
+    "build-staging": "ng build --configuration=stage --output-hashing=all",
+    "build-qa": "ng build --configuration=qa --output-hashing=all"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^20.0.4",
+    "@angular/animations": "^19.2.14",
     "@angular/common": "^19.2.0",
     "@angular/compiler": "^19.2.0",
     "@angular/core": "^19.2.0",
