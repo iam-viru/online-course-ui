@@ -5,7 +5,7 @@
 import { EnvironmentConfiguration } from "../app/models/environment-configuration";
 
 
-const serverUrl='https://peacefullearning-api.azurewebsites.net/api';
+const serverUrl='https://smartlearnbykarthik-api.azurewebsites.net/api';
 
 
 // The list of file replacements can be found in `angular.json`.
@@ -25,7 +25,7 @@ export const environment: EnvironmentConfiguration = {
       'https://smartlearnbykarthik.onmicrosoft.com/smartlearnbykarthik/prod/api/User.Write',
       'https://smartlearnbykarthik.onmicrosoft.com/smartlearnbykarthik/prod/api/User.Write'
     ],
-    apiEndpointUrl: 'https://peacefullearning-api.azurewebsites.net/api'
+    apiEndpointUrl: 'https://smartlearnbykarthik-api.azurewebsites.net/api'
   },
   cacheTimeInMinutes: 30,
 };
